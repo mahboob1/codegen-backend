@@ -2,3 +2,9 @@ venv/
 __pycache__/
 generated/
 .env
+.DS_Store
+*.log
+*.sqlite3
+.idea/
+.vscode/
+coverage/
