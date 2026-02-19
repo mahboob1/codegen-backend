@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: iam-service
+  data:
+    mongodb:
+      uri: ${SPRING_DATA_MONGODB_URI}
+
+jwt:
+#  secret: MyLocalDevSecretKey123456789
+#  secret: myVeryStrongSecretKeyChangeInAWS
+#  secret: MySuperLongJwtSecretKeyForAwsIamService123!
+#  secret: 4fT2bYl+9eFzQmJk7hK1O5xv3i8Vz+6XQ2pYwRZ1dFo=
+#  secret: s4G8Fv0pM8K7H1wZ9aL2xV7uR6bT1cJ5qP3nY2rX0uA=
+  secret: ${JWT_SECRET:s4G8Fv0pM8K7H1wZ9aL2xV7uR6bT1cJ5qP3nY2rX0uA=}
+  expiration: 3600000
